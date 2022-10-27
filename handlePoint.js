@@ -20,9 +20,8 @@ const handlePoint = (averagePoint, pointTrainning) => {
             return "Normal";
         }
 
-        if (pointTrainning < 50) {
-            return "Bad";
-        }
+        return "Bad";
+    
     }
 
     if (averagePoint >= 7) {
@@ -34,18 +33,14 @@ const handlePoint = (averagePoint, pointTrainning) => {
             return "Normal";
         }
 
-        if (pointTrainning < 50) {
-            return "Bad";
-        }
+        return "Bad";
     }
     if (averagePoint >= 5) {
         if (pointTrainning >= 50) {
             return "Normal";
         }
+        return "Bad";
 
-        if (pointTrainning < 50) {
-            return "Bad";
-        }
     }
 
     return "Bad";
@@ -54,3 +49,5 @@ const handlePoint = (averagePoint, pointTrainning) => {
 console.log(handlePoint(9, 90));
 
 module.exports = handlePoint;
+
+
